@@ -1,0 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Engagement&family=Grenze+Gotisch:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color:rgb(32, 32, 32);
+}
+
+grenze-gotisch-<uniquifier> {
+  font-family: "Grenze Gotisch", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* Modern Scrollbar Styling (WebKit Browsers) */
+::-webkit-scrollbar {
+  height: 10px;
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #444;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+nunito-sans-<uniquifier> {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
