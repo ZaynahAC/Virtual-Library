@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BookMarked, User, Heart } from "lucide-react";
 import { Link } from "react-router-dom"; // assuming you're using React Router
+import brandLogo from "./images/brandLogo.jpeg"
+import { useNavigate } from "react-router-dom";
 
 
 const genres = ["Fiction", "Fantasy", "Science", "History", "Romance"];
@@ -249,6 +251,9 @@ const App = () => {
     setSearchResults([]);
   };
 
+  // const navigate = useNavigate();
+
+
   return (
     <div
       style={{
@@ -275,19 +280,32 @@ const App = () => {
             alignItems: "center",
           }}
         >
-          <h1
-            onClick={handleTitleClick}
+          <div
             style={{
-              fontWeight: 400,
-              fontFamily: "Grenze Gotisch",
-              fontSize: "3rem",
-              color: "#000",
-              margin: 0,
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
               cursor: "pointer",
             }}
+            onClick={handleTitleClick}
           >
-            Book's Emporium
-          </h1>
+            <img
+              src={brandLogo}
+              alt="logo"
+              style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+            />
+            <h1
+              style={{
+                fontWeight: 400,
+                fontFamily: "Grenze Gotisch",
+                fontSize: "3rem",
+                color: "#000",
+                margin: 0,
+              }}
+            >
+              Book's Emporium
+            </h1>
+          </div>
           <input
             type="text"
             placeholder="Search for books..."
@@ -304,6 +322,56 @@ const App = () => {
         </nav>
       </div>
 
+      {/* Icon Buttons */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "30px",
+          padding: "20px 0",
+        }}
+      >
+        <button
+        onClick={() => navigate("/journal")}
+          style={{
+            background: "none",
+            border: "none",
+            color: "#fff",
+            cursor: "pointer",
+            fontSize: "24px",
+          }}
+          title="Bookmarks"
+        >
+          <BookMarked />
+        </button>
+        <button
+        onClick={() => navigate("/user")}
+          style={{
+            background: "none",
+            border: "none",
+            color: "#fff",
+            cursor: "pointer",
+            fontSize: "24px",
+          }}
+          title="Profile"
+        >
+          <User />
+        </button>
+        <button
+        onClick={() => navigate("/favourites")}
+          style={{
+            background: "none",
+            border: "none",
+            color: "#fff",
+            cursor: "pointer",
+            fontSize: "24px",
+          }}
+          title="Favorites"
+        >
+          <Heart />
+        </button>
+      </div>
+
       {/* Modal */}
       {selectedBookKey && (
         <BookModal
@@ -312,7 +380,7 @@ const App = () => {
         />
       )}
 
-      {/* Main */}
+      {/* Main Content */}
       <div style={{ padding: "20px" }}>
         {searchResults.length > 0 && (
           <div>
@@ -391,31 +459,30 @@ const App = () => {
 
         {searchResults.length === 0 &&
           genres.map((genre) => (
-          <div key={genre}>
-  <GenreSection
-    genre={genre}
-    onSave={handleSaveBook}
-    onClickBook={setSelectedBookKey}
-  />
-  <hr
-    style={{
-      border: "none",
-      height: "1px",
-      backgroundColor: "#555",
-      margin: "40px 0",
-      width: "100%",
-    }}
-  />
-</div>
-
+            <div key={genre}>
+              <GenreSection
+                genre={genre}
+                onSave={handleSaveBook}
+                onClickBook={setSelectedBookKey}
+              />
+              <hr
+                style={{
+                  border: "none",
+                  height: "1px",
+                  backgroundColor: "#555",
+                  margin: "40px 0",
+                  width: "100%",
+                }}
+              />
+            </div>
           ))}
       </div>
 
       {/* Footer */}
       <footer
-        style={{ backgroundColor: "#fff", color: "#000", padding: "10px 20px" }}
+        style={{ backgroundColor: "#C5C6D0", color: "#787276", padding: "10px 20px" , fontFamily: "Nunito Sans"}}
       >
-        <p style={{ margin: 0 }}>Z.A.C. 2025</p>
+        <p style={{ margin: 0 }}>Z.A.C & Co  2025</p>
       </footer>
     </div>
   );
