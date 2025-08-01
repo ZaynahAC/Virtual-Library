@@ -55,7 +55,6 @@ const Favourites = () => {
         color: "#fff",
       }}
     >
-      {/* Navbar */}
       <div
         style={{
           backgroundColor: "#fff",
@@ -101,7 +100,6 @@ const Favourites = () => {
         </nav>
       </div>
 
-      {/* Icon Buttons */}
       <div
         style={{
           display: "flex",
@@ -151,7 +149,6 @@ const Favourites = () => {
         </button>
       </div>
 
-      {/* Tracker Content */}
       <div style={{ padding: "30px 20px", fontFamily: "Nunito Sans" }}>
         <h2 style={{ fontSize: "2.5rem", textAlign: "center" }}>
           Favorites & TBR Tracker
@@ -165,7 +162,6 @@ const Favourites = () => {
             marginTop: "30px",
           }}
         >
-          {/* Favorites Section */}
           <div
             style={{
               backgroundColor: "#444",
@@ -234,7 +230,6 @@ const Favourites = () => {
             </ul>
           </div>
 
-          {/* TBR Section */}
           <div
             style={{
               backgroundColor: "#444",
@@ -305,7 +300,6 @@ const Favourites = () => {
         </div>
       </div>
 
-      {/* Footer */}
       <footer
         style={{
           backgroundColor: "#C5C6D0",

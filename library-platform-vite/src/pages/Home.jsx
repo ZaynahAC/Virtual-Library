@@ -1,10 +1,9 @@
-// ... imports remain the same
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BookMarked, User, Heart } from "lucide-react";
-import { Link } from "react-router-dom"; // assuming you're using React Router
+import { Link } from "react-router-dom"; 
 import brandLogo from "../images/brandLogo.jpeg"
-import { useNavigate } from "react-router-dom"; // or use lucide-react if preferred
+import { useNavigate } from "react-router-dom"; 
 
 
 const genres = ["Fiction", "Fantasy", "Science", "History", "Romance", "Classic", "Kids", "Thrillers", "Textbooks"];
@@ -17,7 +16,7 @@ const fetchBooksByGenre = async (genre) => {
 };
 
 const BookCard = ({ book, onSave, onClick }) => {
-  const isSaved = false; // optional future enhancement: check saved state
+  const isSaved = false; 
 
   return (
     <div
@@ -263,7 +262,7 @@ const App = () => {
         color: "#fff",
       }}
     >
-      {/* Navbar */}
+      
       <div
         style={{
           backgroundColor: "#fff",
@@ -322,7 +321,7 @@ const App = () => {
         </nav>
       </div>
 
-      {/* Icon Buttons */}
+      
       <div
         style={{
           display: "flex",
@@ -372,7 +371,7 @@ const App = () => {
         </button>
       </div>
 
-      {/* Modal */}
+      
       {selectedBookKey && (
         <BookModal
           bookKey={selectedBookKey}
@@ -380,7 +379,7 @@ const App = () => {
         />
       )}
 
-      {/* Main Content */}
+     
       <div style={{ padding: "20px" }}>
         {searchResults.length > 0 && (
           <div>
@@ -478,7 +477,7 @@ const App = () => {
           ))}
       </div>
 
-      {/* Footer */}
+     
       <footer
         style={{ backgroundColor: "#C5C6D0", color: "#787276", padding: "10px 20px" , fontFamily: "Nunito Sans"}}
       >

@@ -36,7 +36,6 @@ const Journal = () => {
         color: "#fff",
       }}
     >
-      {/* Navbar */}
       <div
         style={{
           backgroundColor: "#fff",
@@ -82,7 +81,6 @@ const Journal = () => {
         </nav>
       </div>
 
-      {/* Icon Buttons */}
       <div
         style={{
           display: "flex",
@@ -132,7 +130,6 @@ const Journal = () => {
         </button>
       </div>
 
-      {/* Journal Content */}
       <div style={{ padding: "30px 20px", fontFamily: "Nunito Sans" }}>
         <h2 style={{ fontSize: "2.5rem", color: "#FAF9F6", textAlign: "center" }}>
           My Book Journal
@@ -178,7 +175,7 @@ const Journal = () => {
           </button>
         </div>
 
-        {/* Past Entries */}
+       
         {entries.length > 0 && (
           <div
             style={{
@@ -212,7 +209,7 @@ const Journal = () => {
         )}
       </div>
 
-      {/* Footer */}
+    
       <footer
         style={{
           backgroundColor: "#C5C6D0",

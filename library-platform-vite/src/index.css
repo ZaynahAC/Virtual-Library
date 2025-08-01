@@ -15,7 +15,6 @@ grenze-gotisch-<uniquifier> {
   font-style: normal;
 }
 
-/* Modern Scrollbar Styling (WebKit Browsers) */
 ::-webkit-scrollbar {
   height: 10px;
   width: 8px;
@@ -55,7 +54,7 @@ nunito-sans-<uniquifier> {
   border-radius: 8px;
   position: absolute;
   z-index: 1;
-  bottom: 120%; /* position above the button */
+  bottom: 120%; 
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;

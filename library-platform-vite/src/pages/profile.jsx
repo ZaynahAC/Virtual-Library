@@ -20,7 +20,7 @@ const Profile = () => {
         color: "#fff",
       }}
     >
-      {/* Navbar */}
+      
       <div
         style={{
           backgroundColor: "#fff",
@@ -66,7 +66,7 @@ const Profile = () => {
         </nav>
       </div>
 
-      {/* Icon Buttons */}
+     
       <div
         style={{
           display: "flex",
@@ -116,7 +116,7 @@ const Profile = () => {
         </button>
       </div>
 
-      {/* Profile Content */}
+      
       <div
         style={{
           padding: "40px 20px",
@@ -146,7 +146,7 @@ const Profile = () => {
         </div>
       </div>
 
-      {/* Footer */}
+     
       <footer
         style={{
           backgroundColor: "#C5C6D0",
