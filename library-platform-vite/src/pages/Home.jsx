@@ -4,10 +4,10 @@ import axios from "axios";
 import { BookMarked, User, Heart } from "lucide-react";
 import { Link } from "react-router-dom"; // assuming you're using React Router
 import brandLogo from "../images/brandLogo.jpeg"
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // or use lucide-react if preferred
 
 
-const genres = ["Fiction", "Fantasy", "Science", "History", "Romance"];
+const genres = ["Fiction", "Fantasy", "Science", "History", "Romance", "Classic", "Kids", "Thrillers", "Textbooks"];
 
 const fetchBooksByGenre = async (genre) => {
   const response = await axios.get(
@@ -331,7 +331,7 @@ const App = () => {
           padding: "20px 0",
         }}
       >
-        <button
+<button
         onClick={() => navigate("/journal")}
           style={{
             background: "none",
@@ -340,7 +340,7 @@ const App = () => {
             cursor: "pointer",
             fontSize: "24px",
           }}
-          title="Bookmarks"
+          title="Journal"
         >
           <BookMarked />
         </button>

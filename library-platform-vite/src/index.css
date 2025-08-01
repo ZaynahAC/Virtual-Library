@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color:rgb(32, 32, 32);
+  background-color:rgba(53, 53, 53, 1);
 }
 
 grenze-gotisch-<uniquifier> {
@@ -39,4 +39,32 @@ nunito-sans-<uniquifier> {
   font-variation-settings:
     "wdth" 100,
     "YTLC" 500;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: #444;
+  color: #fff;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%; /* position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }
