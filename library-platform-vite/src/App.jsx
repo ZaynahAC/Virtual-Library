@@ -4,6 +4,7 @@ import axios from "axios";
 import { BookMarked, User, Heart } from "lucide-react";
 import { Link } from "react-router-dom"; // assuming you're using React Router
 
+
 const genres = ["Fiction", "Fantasy", "Science", "History", "Romance"];
 
 const fetchBooksByGenre = async (genre) => {
@@ -267,55 +268,40 @@ const App = () => {
           zIndex: 1000,
         }}
       >
-       <nav
-  style={{
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-  }}
->
-  <h1
-    onClick={handleTitleClick}
-    style={{
-      fontWeight: 400,
-      fontFamily: "Grenze Gotisch",
-      fontSize: "3rem",
-      color: "#000",
-      margin: 0,
-      cursor: "pointer",
-    }}
-  >
-    Book's Emporium
-  </h1>
-
-  {/* Right-side nav with search and icons */}
-  <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-    <input
-      type="text"
-      placeholder="Search for books..."
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-      onKeyDown={handleSearch}
-      style={{
-        width: "300px",
-        height: "40px",
-        padding: "8px",
-        fontSize: "16px",
-      }}
-    />
-
-    {/* Nav Icons */}
-    <Link to="/reading-list" title="Reading List">
-      <BookMarked size={28} color="#333" />
-    </Link>
-    <Link to="/favourites" title="Favourites">
-      <Heart size={28} color="#e63946" />
-    </Link>
-    <Link to="/profile" title="Profile">
-      <User size={28} color="#333" />
-    </Link>
-  </div>
-</nav>
+        <nav
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <h1
+            onClick={handleTitleClick}
+            style={{
+              fontWeight: 400,
+              fontFamily: "Grenze Gotisch",
+              fontSize: "3rem",
+              color: "#000",
+              margin: 0,
+              cursor: "pointer",
+            }}
+          >
+            Book's Emporium
+          </h1>
+          <input
+            type="text"
+            placeholder="Search for books..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyDown={handleSearch}
+            style={{
+              width: "300px",
+              height: "40px",
+              padding: "8px",
+              fontSize: "16px",
+            }}
+          />
+        </nav>
       </div>
 
       {/* Modal */}
